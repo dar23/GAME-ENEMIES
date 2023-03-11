@@ -33,25 +33,48 @@ let pos=400;
 
 let speed=15;
 
-let initX=Math.random()*670;
+let initX=Math.random()*2;
 
 let initY=0;
 
+let initR=1;
 
+let  initZ=Math.random();
 
 function starter(){
     
     
     c.clearRect(0,0, canvas.width,canvas.height);
     
-    ball(); 
- 
-    rock();
-    
+    ball();
+
+
+   rock();
+rock1();
+
 
 }
 
 setInterval(starter,1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

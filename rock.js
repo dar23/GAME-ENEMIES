@@ -1,34 +1,59 @@
-
 function rock(){
 
  
   
     c.fillStyle = "red";
-    c.fillRect(initX, initY,80,26);
+    c.fillRect(initX, initR,80,26);
    
 
     
     
-    initY++;  // współrzędna Y zwiększa się o 1 pixel (przesuwa się w dół wg osi y);
+    initR=initR+1.7;  // współrzędna Y zwiększa się o 1 pixel (przesuwa się w dół wg osi y);
     
   
     
-    if(initY>=400){
+    if(initR>=400){
     
-         initY=0;
-         initX=Math.random()*620;
+         initR=0;
+         initX=Math.random()*630;
+        
+    }
+   
+ 
+
+    }
+
+
+
+
+    function rock1(){
+
+ 
+   
+        c.fillStyle = "red";
+        c.fillRect(initZ, initY,80,26);
        
-    }
-   
     
-    }
-  
-   
-
-
-
-
-
+        
+        
+        initY=initY+1.4;  // współrzędna Y zwiększa się o 1 pixel (przesuwa się w dół wg osi y);
+        
+      
+        
+        if(initY>=400){
+        
+             initY=0;
+             initZ=Math.random()*630;
+            
+        }
+       
+     
+    
+        }
+    
+    
+    
+ 
     
 
     
