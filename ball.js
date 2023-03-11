@@ -2,7 +2,7 @@
 function ball(){
       
     c.fillStyle='blue';
-    c.fillRect(x,y,30,30);
+    c.fillRect(x,y,50,30);
     
 }
 

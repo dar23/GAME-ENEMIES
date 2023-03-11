@@ -31,15 +31,17 @@ let position_end_y= canvas.height-30; // granica dolna canvas
 let position_zero_y=canvas.height-370; //granica górna canvas
 let pos=400;
 
-let speed=15;
+let speed=80;
 
-let initX=Math.random()*2;
+let initX=Math.random();
 
-let initY=0;
+let initY2=5;
+let initY1=6;
 
-let initR=1;
 
-let  initZ=Math.random();
+let initX1=1;
+
+let  initX2=Math.random()+50;
 
 function starter(){
     
@@ -50,7 +52,8 @@ function starter(){
 
 
    rock();
-rock1();
+   
+    rock1();
 
 
 }
