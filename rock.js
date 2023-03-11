@@ -4,8 +4,7 @@ function rock(){
  
   
     c.fillStyle = "red";
-   
-   c.fillRect(initX, initY,80,26);
+    c.fillRect(initX, initY,80,26);
    
 
     
@@ -14,21 +13,18 @@ function rock(){
     
   
     
-    if(initY>=400 && initY>=10){
+    if(initY>=400){
     
          initY=0;
          initX=Math.random()*620;
-         
+       
     }
-    
    
-
-
+    
     }
   
-
-
    
+
 
 
 
