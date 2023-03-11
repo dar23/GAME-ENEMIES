@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gra.css">
+    <script src="obstatle.js"></script>
+    <title>GRA</title>
+</head>
+<body >
+    <canvas id="canvas"  width="700" height="400"></canvas>
+
+<script>
+
+
+    var canvas=document.getElementById('canvas');
+    var c=canvas.getContext('2d');
+
+
+
+
+   
+    let x = canvas.width/2;
+     
+    let position_zero=canvas.width-700;
+    
+    let position_end=canvas.width-30;
+
+
+
+let y = canvas.height-30; 
+
+let position_end_y= canvas.height-30; // granica dolna canvas
+
+
+let position_zero_y=canvas.height-370; //granica górna canvas
+let pos=400;
+
+let speed=15;
+
+let initX=Math.random()*670;
+
+let initY=0;
+
+
+
+function rock(){
+
+    
+  
+c.fillStyle = "red";
+c.fillRect(initX, initY, 70,30);
+
+
+
+
+initY++;  // współrzędna Y zwiększa się o 1 pixel (przesuwa się w dół wg osi y);
+
+
+function repeatBlock(){
+
+if(initY>=400){
+
+     initY=0;
+     initX=Math.random()*630;
+     
+}
+}
+
+setInterval(repeatBlock,1000);
+
+}
+
+
+
+
+
+
+
+
+
+function ball(){
+      
+         c.fillStyle='blue';
+         c.fillRect(x,y,30,30);
+   
+}
+
+
+
+
+
+function starter(){
+    c.clearRect(0,0, canvas.width,canvas.height);
+    ball(); 
+    rock();
+
+
+}
+
+setInterval(starter,1);
+
+
+
+
+window.addEventListener('keydown', change_key,false);
+
+
+
+function change_key(key){
+       
+    if(key.keyCode == "39"){
+x+=speed;
+
+if(x>position_end){
+
+
+x=670;
+
+
+
+
+}
+
+       
+        }
+
+if(key.keyCode=="37"){
+ x-=speed;
+
+if(x<position_zero){
+
+
+x=0;
+
+
+
+
+}
+
+
+
+
+
+
+
+}
+
+
+ if(key.keyCode=="38"){
+ y-=speed;
+
+ if(y<position_zero_y){
+    
+    y=0;
+}
+
+ }
+ 
+
+
+ if(key.keyCode=="40"){
+    y+=speed;
+
+       if(y> position_end_y){
+
+            y=370;
+      
+       }
+
+
+
+
+    }
+
+
+if(key.keyCode=="39" && key.keyCode=="40"){
+
+ x+=speed;
+ y+=speed;
+
+}
+
+if(key.keyCode=="38" && key.keyCode=="37"){
+
+    x-=speed;
+    y-=speed;
+   
+   }
+   
+   if(key.keyCode=="37" && key.keyCode=="39"){
+
+x+=speed;
+y+=speed;
+
+}
+
+if(key.keyCode=="40" && key.keyCode=="38"){
+
+   x-=speed;
+   y-=speed;
+  
+  }
+
+
+}
+
+</script>
+
+
+
+</body>
+</html>
