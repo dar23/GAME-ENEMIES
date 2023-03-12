@@ -1,21 +1,21 @@
 function rock(){
 
-
+ 
   
     c.fillStyle = "red";
-    c.fillRect(initX1, initY1,80,26);
+    c.fillRect(initX, initR,80,26);
    
 
     
     
-    initY1=initY1+1.4;  // współrzędna Y zwiększa się o 1 pixel (przesuwa się w dół wg osi y);
+    initR=initR+3;  // współrzędna Y zwiększa się o 1 pixel (przesuwa się w dół wg osi y);
     
   
     
-    if(initY1>=400){
+    if(initR>=400){
     
-        initY1=0;
-         initX1=Math.random()*640;
+         initR=0;
+         initX=Math.random()*630;
         
     }
    
@@ -25,28 +25,29 @@ function rock(){
 
 
 
- function rock1(){
+
+    function rock1(){
 
  
    
         c.fillStyle = "red";
-        c.fillRect(initX2, initY,80,26);
+        c.fillRect(initZ, initY,80,26);
        
     
         
         
-        initY=initY+1;  // współrzędna Y zwiększa się o 1 pixel (przesuwa się w dół wg osi y);
+        initY=initY+4.5;  // współrzędna Y zwiększa się o 1 pixel (przesuwa się w dół wg osi y);
         
       
         
         if(initY>=400){
         
              initY=0;
-             initX2=Math.random()*600;
+             initZ=Math.random()*630;
             
         }
        
-   
+     
     
         }
     

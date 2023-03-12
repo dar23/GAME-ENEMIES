@@ -1,8 +1,8 @@
 
 function ball(){
-      
-    c.fillStyle='blue';
-    c.fillRect(x,y,50,30);
+    
+    c.fillStyle='orange';
+    c.fillRect(x,y,30,30);
     
 }
 

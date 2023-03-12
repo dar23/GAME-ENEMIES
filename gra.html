@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="gra.css">
+    <script src="control.js"></script>
+    
     <script src="ball.js"></script>
     <script src="rock.js"></script>
-     <script src="control.js"></script>
+    
     <title>GRA</title>
 </head>
-<body >
+<body onload="start">
     <canvas id="canvas"  width="700" height="400"></canvas>
 
 <script>
 
 var canvas=document.getElementById('canvas');
 var c=canvas.getContext('2d');
+
 
 let x = canvas.width/2;
  
@@ -31,34 +34,29 @@ let position_end_y= canvas.height-30; // granica dolna canvas
 let position_zero_y=canvas.height-370; //granica górna canvas
 let pos=400;
 
-let speed=80;
+let speed=20;
 
-let initX=Math.random();
+let initX=Math.random()*2;
 
-let initY2=5;
-let initY1=6;
+let initY=0;
 
+let initR=1;
 
-let initX1=1;
+let  initZ=Math.random();
 
-let  initX2=Math.random()+50;
+setInterval(function() {
 
-function starter(){
-    
-    
     c.clearRect(0,0, canvas.width,canvas.height);
     
     ball();
-
-
-   rock();
-   
+    rock();
     rock1();
 
+},10);
+    
 
-}
 
-setInterval(starter,1);
+
 
 
 

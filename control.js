@@ -1,60 +1,121 @@
 
 
-window.addEventListener('keydown', change_key,false);
 
 
+window.addEventListener('keydown', change_key_down,true);
 
-function change_key(key){
+function change_key_down(key){
        
-    if(key.keyCode == "39"){
-x+=speed;
 
-if(x>position_end){
+switch(key.keyCode){
+      
+   case 39:
 
-x=670;
+      x+=speed;
+      break;
+ 
+   case 37:
+
+      x-=speed;
+      break;
+
+    case 38:
+
+      y-=speed;
+      break;
+
+   case 40:
+
+      y+=speed;
+      break;
 
 }
 
-       
-        }
 
 
+if (x>position_end){
 
-if(key.keyCode=="37"){
- x-=speed;
+x=670;
 
-if(x<position_zero){
+} else if (x<position_zero){
 
 x=0;
 
 }
 
-}
-
-
- if(key.keyCode=="38"){
- y-=speed;
-
- if(y<position_zero_y){
+ if (y<position_zero_y){
     
     y=0;
-}
-
- }
- 
-
-
- if(key.keyCode=="40"){
-    y+=speed;
-
-       if(y> position_end_y){
+   
+   }else if (y>position_end_y){
 
             y=370;
       
        }
 
-    }
+    
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
 
 if(key.keyCode=="39" && key.keyCode=="40"){
 
@@ -86,3 +147,6 @@ if(key.keyCode=="40" && key.keyCode=="38"){
 
 
 }
+
+
+
