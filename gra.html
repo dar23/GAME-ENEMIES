@@ -30,11 +30,14 @@ let y = canvas.height-30;
 
 let position_end_y= canvas.height-30; // granica dolna canvas
 
+let LEFT, UP, RIGHT, DOWN;
+
+
 
 let position_zero_y=canvas.height-370; //granica górna canvas
 let pos=400;
 
-let speed=20;
+let speed=10;
 
 let initX=Math.random()*2;
 
@@ -51,7 +54,8 @@ setInterval(function() {
     ball();
     rock();
     rock1();
-
+    position();
+    move();
 },10);
     
 

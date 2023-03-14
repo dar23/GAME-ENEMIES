@@ -1,152 +1,163 @@
 
+function position(){
 
-
-
-window.addEventListener('keydown', change_key_down,true);
-
-function change_key_down(key){
+   if (x>position_end){  // koniec ruchu na osi x
+   
+   x=670;
+   
+   } 
+   
+   if (x<position_zero){  // początek  ruchu na osi x
+     
+   x=0;
+   
+   }
+   
+    if (y<position_zero_y){ // początek  ruchu na osi y
        
+       y=0;
+    }
+      if (y>position_end_y){ // koniec ruchu na osi y
+   
+               y=370;
+         
+          }
+}
 
-switch(key.keyCode){
+function move(){
+   if(LEFT){
+       x-=speed;
+   }
+   if(UP){
+       y-=speed;
+   }
+   if(RIGHT){
+       x+=speed;
+   }
+   if(DOWN){
+       y+=speed;
+   }
+}
+
+
+
+window.addEventListener('keydown', change_key_down);
+
+window.addEventListener('keyup', change_key_up);
+
+function change_key_down(e){
+       
+   
+switch(e.keyCode){
       
    case 39:
 
-      x+=speed;
-      break;
+  RIGHT = true;
+  
+   
+    break;
  
    case 37:
 
-      x-=speed;
+   LEFT = true;
+
       break;
 
     case 38:
 
-      y-=speed;
+    UP = true;
       break;
+    
 
    case 40:
+      DOWN = true;
 
-      y+=speed;
       break;
 
 }
 
 
 
-if (x>position_end){
+} 
 
-x=670;
 
-} else if (x<position_zero){
 
-x=0;
 
-}
 
- if (y<position_zero_y){
-    
-    y=0;
+function change_key_up(keyup){
    
-   }else if (y>position_end_y){
 
-            y=370;
+   switch(keyup.keyCode){
+      case 39:
+
+      RIGHT = false;
+     
       
-       }
-
+       break;
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      case 37:
+   
+     LEFT = false;
+   
+         break;
+   
+       case 38:
+   
+       UP = false;
+         break;
        
-
-if(key.keyCode=="39" && key.keyCode=="40"){
-
- x+=speed;
- y+=speed;
-
-}
-
-if(key.keyCode=="38" && key.keyCode=="37"){
-
-    x-=speed;
-    y-=speed;
+   
+      case 40:
+         DOWN = false;
+   
+         break;
    
    }
-   
-   if(key.keyCode=="37" && key.keyCode=="39"){
-
-x+=speed;
-y+=speed;
-
 }
 
-if(key.keyCode=="40" && key.keyCode=="38"){
 
-   x-=speed;
-   y-=speed;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
-  }
-
-
-}
-
 
 
